@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<% @artists.each do |artista| %>
+			<div class="col-xs-3">
+				<div class="row">
+					<div class="index-artists">
+						<div class="col-sm-12 ">
+						  	<div class="thumbnail">						  		
+						  		<%= image_tag artista.image_url, :class => "artist-image" %>
+						    	<div class="caption">
+						      		<h2 class="text-center"><%= artista.name %></h2>	
+						      		<%= link_to "Ver Mas", artista, class: "btn btn-primary  btn-lg btn-block"%>	  
+						     	</div>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
